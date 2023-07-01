@@ -1,0 +1,1829 @@
+{
+  "namespace": "kbtq",
+  "name": "t_kbtq_customer_info_his",
+  "doc": "Entity to save the historical customer basic information. They are customers who are given according to a profile, a position or a profession. They can also be contact persons of a company. They will attach economic data, documents related to their cargo, etc",
+  "database": "master",
+  "storageZone": "Masterdata",
+  "storageType": "HDFS-Parquet",
+  "physicalPath": "/data/master/kbtq/data/t_kbtq_customer_info_his",
+  "partitions": ["gf_cutoff_date"],
+  "securityLevel": "L2",
+  "objectVersion": "4.0.1",
+  "type": "record",
+  "fields": [{
+    "name": "g_customer_id",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(15)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cutoff_date",
+    "type": "date",
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "g_country_id",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_entity_id",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_id",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(9)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_type",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_entry_date",
+    "type": "date",
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_customer_update_time_date",
+    "type": "timestamp",
+    "logicalFormat": "TIMESTAMP",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd HH:mm:ss.SSSSSS",
+    "locale": "pe"
+  }, {
+    "name": "gf_personal_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cust_qttv_rating_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_personal_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(25)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cfd_cust_segment_id",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_personal_status_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_expedition_document_date",
+    "type": "date",
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_special_status_desc",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_document_expiration_date",
+    "type": "date",
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_document_update_date",
+    "type": "date",
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_expedition_doc_state_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(20)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_person_education_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_total_net_income_py_amount",
+    "type": ["null", "decimal(26,6)"],
+    "logicalFormat": "DECIMAL(26,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_person_education_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_personal_type_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_personal_status_type_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_personal_doc_subtype_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_subtype_personal_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_legal_person_inst_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_institution_type_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_inst_type_criterion_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_consolidation_companies_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_consolidation_co_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_first_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(160)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_middle_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(30)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_last_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_second_last_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_person_name_suffix_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cust_econ_rslt_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_gender_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_gender_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(15)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_birth_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_resident_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_country_nationality_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_residence_country_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_birth_country_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_birth_town_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(40)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_province_birth_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(40)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_marital_status_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_marital_status_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_matrimonial_regime_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_type_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(250)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_residence_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_residence_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_country_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_geographical_group_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(40)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_province_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_town_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(9)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_town_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(40)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_road_type_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(15)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_road_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(100)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_secndy_addr_road_number_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_reference_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(254)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_urbanization_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_primry_addr_road_number_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_zipcode_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(10)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_verified_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_verified_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_address_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(254)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_x_coord_number",
+    "type": ["null", "decimal(10,7)"],
+    "logicalFormat": "DECIMAL(10,7)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_address_y_coord_number",
+    "type": ["null", "decimal(10,7)"],
+    "logicalFormat": "DECIMAL(10,7)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_email_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(255)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_phone_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_phone_type_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_prefix_phone_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(6)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_prefix_phone_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_extension_phone_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_phone_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(15)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_current_segment_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_title_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_segment_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_title_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_residence_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_accounting_sector_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_accounting_subsector_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(10)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_legal_status_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_vip_customer_banking_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_status_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_status_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_swift_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(11)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_activity_end_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_correspondence_language_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_local_institution_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_tax_exempt_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_tax_exemption_initial_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_tax_exempt_end_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_role_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_role_type_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_employee_entity_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_fax_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(15)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_recipient_mail_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(255)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_website_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(500)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_end_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_taxpayer_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(25)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_check_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(38)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_account_register_entity_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_account_register_branch_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_card_holder_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_study_title_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_study_title_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_contact_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_financial_rating_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(10)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cust_subgroup_classif_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cust_subgroup_classif_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_verification_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cut_co_econ_activity_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(11)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cust_economic_activity_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_decree_dependency_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(10)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_reserve_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_reserved_information_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_study_level_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_study_level_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_terminal_last_modify_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_bankruptcy_situation_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_bankruptcy_situation_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_pers_address_foreign_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(140)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_branch_reassigned_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_branch_reassigned_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_poltcl_exps_pers_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_unified_mail_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_holded_mail_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_periodicity_mail_number",
+    "type": ["null", "decimal(5)"],
+    "logicalFormat": "DECIMAL(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_returned_mail_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_last_change_entity_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_last_change_branch_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_senior_pos_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(6)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_customer_language_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_position_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_adult_dependants_number",
+    "type": ["null", "decimal(4)"],
+    "logicalFormat": "DECIMAL(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_child_dependants_number",
+    "type": ["null", "decimal(4)"],
+    "logicalFormat": "DECIMAL(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_firstborn_birth_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_marriage_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_relatives_data_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_spouse_personal_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(25)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_spouse_personal_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_company_billing_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "g_customer_company_country_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_billing_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_automated_payments_number",
+    "type": ["null", "decimal(19)"],
+    "logicalFormat": "DECIMAL(19)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_company_economic_actvy_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(11)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_company_foundation_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_company_join_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_external_commerce_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_company_export_per",
+    "type": ["null", "decimal(9,6)"],
+    "logicalFormat": "DECIMAL(9,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_ext_act_dest_cntry_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_ext_actvy_origin_country_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_company_import_per",
+    "type": ["null", "decimal(9,6)"],
+    "logicalFormat": "DECIMAL(9,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_company_trade_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(100)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_employees_number",
+    "type": ["null", "decimal(17)"],
+    "logicalFormat": "DECIMAL(17)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_franchise_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_poltcl_exps_pers_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(254)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_net_worth_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_flat_owned_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_geographic_group_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(10)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_prtcpt_gr_header_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_rating_corporative_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_customer_solvency_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_cust_level_solv_study_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_customer_econ_activity_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_seasonal_commerce_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_activity_start_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_income_level_calc_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_total_balance_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_entity_branches_number",
+    "type": ["null", "decimal(5)"],
+    "logicalFormat": "DECIMAL(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_buss_activity_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_buss_activity_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_currency_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_curr_ocpn_join_year_id",
+    "type": ["null", "decimal(4)"],
+    "logicalFormat": "DECIMAL(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_owner_site_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(8)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_executive_pos_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_province_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(9)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_executive_pos_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_district_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_legal_status_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_executive_profile_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_executive_profile_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cut_co_econ_activity_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_job_class_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(20)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_job_class_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_urbanization_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(25)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_current_job_start_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_customer_company_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_last_mailing_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "g_main_manager_position_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_main_entity_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_main_local_branch_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_co_information_data_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_cntrb_ptnr_actvy_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_person_qttv_rating_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_other_entity_with_cr_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_other_ent_with_cr_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_other_ent_with_savings_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_other_ent_with_sav_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_other_entity_2_with_cr_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_other_ent_2_with_cr_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_other_entity_2_with_sav_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_other_ent_2_sav_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_entity_deposit_eval_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_company_coverage_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_company_coverage_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_employee_entity_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(250)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_person_qttv_rating_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_total_cars_number",
+    "type": ["null", "decimal(4)"],
+    "logicalFormat": "DECIMAL(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_prone_save_status_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_valtn_other_prop_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_address_customer_rel_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_housing_type_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_campaing_exclusion_date",
+    "type": ["date", "null"],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd",
+    "locale": "pe"
+  }, {
+    "name": "gf_cno_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(11)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cno1_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(11)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cnae_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(11)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_cnae1_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(11)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_dclr_cust_risk_cirbe_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_risk_level_desc",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(80)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_default_risk_mark_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_risk_level_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_address_district_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(5)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_rent_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_rba_risk_dili_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_rba_scoring_number",
+    "type": ["null", "decimal(18,4)"],
+    "logicalFormat": "DECIMAL(18,4)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_rba_risk_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_taxes_liability_tot_amount",
+    "type": ["null", "decimal(26,6)"],
+    "logicalFormat": "DECIMAL(26,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_monthly_fixed_income_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_total_asset_amount",
+    "type": ["null", "decimal(26,6)"],
+    "logicalFormat": "DECIMAL(26,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_total_revenues_py_amount",
+    "type": ["null", "decimal(26,6)"],
+    "logicalFormat": "DECIMAL(26,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_monthly_var_income_amount",
+    "type": ["null", "decimal(18,6)"],
+    "logicalFormat": "DECIMAL(18,6)",
+    "deleted": false,
+    "metadata": false,
+    "default": null,
+    "locale": "pe"
+  }, {
+    "name": "gf_entity_default_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_user_audit_id",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_audit_date",
+    "type": "timestamp",
+    "logicalFormat": "TIMESTAMP",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd HH:mm:ss.SSSSSS",
+    "locale": "pe"
+  }, {
+    "name": "g_expedition_doc_country_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_expedition_doc_town_name",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(40)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_soverign_ind_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "g_cent_adm_pub_comp_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(1)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_extr_net_installation_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(4)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_local_repository_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_holding_activity_sector_id",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "gf_record_funcl_update_date",
+    "type": "timestamp",
+    "logicalFormat": "TIMESTAMP",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-dd HH:mm:ss.SSSSSS",
+    "locale": "pe"
+  }, {
+    "name": "g_update_source_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(6)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }]
+}
